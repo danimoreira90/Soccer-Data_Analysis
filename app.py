@@ -298,12 +298,13 @@ with st.form("options_form"):
         st.write(f"Quantidade de eventos: {num_events}")
         st.write(f"Intervalo de tempo: de {min_time} a {max_time} minutos")
         if 'player1' in locals() and 'player2' in locals():
-            st.write(f"Comparando {player1} com {player2}")
+            st.write(f"Comparando {player1} com {player2}")  
+
 
 if "num_events" not in st.session_state:
     st.session_state.num_events = 100
 
 if submitted:
-    st.session_state.num_events = num_events  # Atualiza o estado da sessão
+    st.session_state.num_events = num_events 
 
 st.write(f"A quantidade atual de eventos para visualizar é {st.session_state.num_events}")
